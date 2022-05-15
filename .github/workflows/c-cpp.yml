@@ -17,6 +17,8 @@ jobs:
       run: sudo apt-get update
     - name: fulfil
       run: sudo apt-get install automake
+    - name: reconfigure
+      run: autoreconf -fi && exec ls -l install-sh
     - name: configure
       run: exec sh -x configure
     - name: make
