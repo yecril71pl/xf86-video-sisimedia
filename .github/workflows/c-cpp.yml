@@ -16,7 +16,7 @@ jobs:
     - name: update
       run: sudo apt-get update
     - name: fulfil
-      run: sudo apt-get install automake
+      run: sudo apt-get install automake xorg-macros
     - name: reconfigure
       run: autoreconf -fi && exec ls -l install-sh
     - name: configure
