@@ -119,6 +119,7 @@
 
 #ifdef SISDRI
 #include "dri.h"
+#include "sis_dri.h"
 #endif
 
 /* Globals (yes, these ARE really required to be global) */
