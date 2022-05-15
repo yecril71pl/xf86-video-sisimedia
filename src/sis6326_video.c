@@ -98,6 +98,9 @@ static Atom xvDisableGfx;
 static int oldH, oldW;
 #endif
 
+enum { PCI_CHIP_SIS530 =
+	0X6306 };
+
 /****************************************************************************
  * Raw register access : These routines directly interact with the sis's
  *                       control aperature.  Must not be called until after
