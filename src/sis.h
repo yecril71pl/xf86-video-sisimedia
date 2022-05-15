@@ -72,7 +72,6 @@
 #include "xf86Resources.h"
 #endif
 #include "xf86.h"
-#include "xf86PciInfo.h"
 #include "xf86Cursor.h"
 #include "xf86cmap.h"
 #include "vbe.h"
