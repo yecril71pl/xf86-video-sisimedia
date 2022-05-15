@@ -10971,23 +10971,28 @@ SiS_GetSetBIOSScratch(ScrnInfoPtr pScrn, UShort offset, UChar value)
 
 #ifdef SIS_USE_BIOS_SCRATCH
     if(SISPTR(pScrn)->Primary) {
+               UChar *
+		       cbase;
 
 #ifndef XSERVER_LIBPCIACCESS
        base = xf86MapVidMem(pScrn->scrnIndex, VIDMEM_MMIO, 0, 0x2000);
 #else
        pci_device_map_range(SISPTR(pScrn)->PciInfo, 0, 0x2000, 1, &base);
 #endif
-
+cbase = base;
        if(!base) {
           SISErrorLog(pScrn, "(Could not map BIOS scratch area)\n");
           return ret;
        }
 
-       ret = *(base + offset);
+       ret =
+	       ((cbase = 
+	       base) [
+	       + offset]
+	       );
 
        /* value != 0xff means: set register */
-       if(value != 0xff) { UChar *
-	       const cbase = base;
+       if(value != 0xff) {
 		  (cbase[
 	    + offset]
 		  ) = value;
