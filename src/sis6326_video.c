@@ -99,7 +99,8 @@ static int oldH, oldW;
 #endif
 
 enum { PCI_CHIP_SIS530 =
-	0X6306 };
+	0X6306, PCI_CHIP_SIS6326 = 0X6326
+      };
 
 /****************************************************************************
  * Raw register access : These routines directly interact with the sis's
