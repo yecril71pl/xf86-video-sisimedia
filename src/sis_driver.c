@@ -10665,7 +10665,7 @@ SISLeaveVT(ScrnInfoPtr pScrn)
     ScreenPtr pScreen;
 
     if(pSiS->directRenderingEnabled) {
-       pScreen = xf86ScreenToScrn(pScrn);
+       pScreen = xf86ScrnToScreen(pScrn);
 /* Mark for 3D full-screen bug */
 /*   DRILock(pScreen, 0); */
     }
