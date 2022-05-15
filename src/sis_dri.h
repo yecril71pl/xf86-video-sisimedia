@@ -127,4 +127,5 @@ void SISDRICloseScreen(ScreenPtr pScreen);
 Bool SISDRIFinishScreenInit(ScreenPtr pScreen);
 
 #endif
+void SISDRICloseScreen(ScreenPtr pScreen);
 #endif
