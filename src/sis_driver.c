@@ -10986,8 +10986,11 @@ SiS_GetSetBIOSScratch(ScrnInfoPtr pScrn, UShort offset, UChar value)
        ret = *(base + offset);
 
        /* value != 0xff means: set register */
-       if(value != 0xff) {
-          *(base + offset) = value;
+       if(value != 0xff) { UChar *
+	       const cbase = base;
+		  (cbase[
+	    + offset]
+		  ) = value;
        }
 
 #ifndef XSERVER_LIBPCIACCESS
