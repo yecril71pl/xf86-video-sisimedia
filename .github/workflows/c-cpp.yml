@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: update
-      run: exec sudo apt-get update
+      run: sudo apt-get update && exec apt-get search xorg-macros
     - name: fulfil
       run: exec sudo apt-get install automake xorg-macros-dev
     - name: reconfigure
