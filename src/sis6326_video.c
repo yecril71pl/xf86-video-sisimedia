@@ -99,7 +99,7 @@ static int oldH, oldW;
 #endif
 
 enum { PCI_CHIP_SIS530 =
-	0X6306, PCI_CHIP_SIS6326 = 0X6326
+	0X6306, PCI_CHIP_SIS6326 = 0X6326, PCI_CHIP_SIS5597=0X200
       };
 
 /****************************************************************************
