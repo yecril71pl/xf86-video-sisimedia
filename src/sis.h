@@ -34,7 +34,10 @@
 
 #ifndef _SIS_H_
 #define _SIS_H_
-
+enum { PCI_CHIP_SIS530 =
+	0X6306, PCI_CHIP_SIS6326 = 0X6326,
+ PCI_CHIP_SIS5597=0X200
+      };
 // XXX!!!
 #define _swapl(x, n) swapl(x)
 #define _swaps(x, n) swaps(x)
@@ -1761,5 +1764,4 @@ extern void  SiS_SetSISCRT1SaturationGain(ScrnInfoPtr pScrn, int val);
 
 
 #endif  /* _SIS_H_ */
-
 
