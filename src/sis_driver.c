@@ -1022,7 +1022,9 @@ SiS_CheckKernelFB(ScrnInfoPtr pScrn)
 
 	     Bool gotit = FALSE;
 
- 	     if(!ioctl(fd, SISFB_GET_INFO_SIZE, &sisfbinfosize)) {
+ 	     if(!ioctl(getfd (
+fd)
+, SISFB_GET_INFO_SIZE, &sisfbinfosize)) {
  		if((mysisfbinfo = malloc(sisfbinfosize))) {
  		   if(!ioctl(fd, (SISFB_GET_INFO | (sisfbinfosize << 16)), mysisfbinfo)) {
  		      gotit = TRUE;
