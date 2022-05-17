@@ -980,7 +980,8 @@ SiSLoadInitDDCModule(ScrnInfoPtr pScrn)
 static void
 SiS_CheckKernelFB(ScrnInfoPtr pScrn)
 {
-    SISPtr pSiS = SISPTR(pScrn);  FILE *fd;
+    SISPtr pSiS = SISPTR(pScrn);  FILE *F
+;
     int        
  i;
     CARD32     sisfbinfosize = 0, sisfbversion;
@@ -1018,11 +1019,14 @@ SiS_CheckKernelFB(ScrnInfoPtr pScrn)
 	  }
 
           if((fd = fopen(name, "r"))
-) {
+) { int const fd = fileno
+ (
+F
+);
 
 	     Bool gotit = FALSE;
 
- 	     if(!ioctl(fileno
+ 	     if(!ioctl(
  (
 fd)
 , SISFB_GET_INFO_SIZE, &sisfbinfosize)) {
