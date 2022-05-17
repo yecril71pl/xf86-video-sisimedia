@@ -979,8 +979,9 @@ SiSLoadInitDDCModule(ScrnInfoPtr pScrn)
 static void
 SiS_CheckKernelFB(ScrnInfoPtr pScrn)
 {
-    SISPtr pSiS = SISPTR(pScrn);
-    int        fd, i;
+    SISPtr pSiS = SISPTR(pScrn);  FILE *fd;
+    int        
+ i;
     CARD32     sisfbinfosize = 0, sisfbversion;
     sisfb_info *mysisfbinfo;
     char       name[16];
