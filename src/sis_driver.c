@@ -1016,7 +1016,8 @@ SiS_CheckKernelFB(ScrnInfoPtr pScrn)
 	     sprintf(name, "/dev/fb/%1d", (i - 8));
 	  }
 
-          if((fd = fopen(name, "r")) != -1) {
+          if((fd = fopen(name, "r"))
+) {
 
 	     Bool gotit = FALSE;
 
