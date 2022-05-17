@@ -9910,7 +9910,13 @@ SISScreenInit(ScreenPtr pScreen, int argc, char **argv)
        pSiS->Rotate = 0;
        pSiS->Reflect = 0;
        pSiS->ShadowFB = FALSE;
-	    /* TODO: fill in the right version numbers from <URL: https://gitlab.freedesktop.org/xorg/xserver/-/commit/dd00e5466a0e >
+	    /*
+ TODO:
+ fill in
+ the right version numbers
+ from <URL:
+ https://gitlab.freedesktop.org/xorg/xserver/-/commit/dd00e5466a0e >
+*/
 #if XF86_VERSION_CURRENT >= XF86_VERSION_NUMERIC(4,3,0,0,0) && XF86_VERSION_CURRENT <= XF86_VERSION_NUMERIC(4,3,0,0,0) 
        if(pSiS->CRT1XOffs || pSiS->CRT1YOffs || pSiS->CRT2XOffs || pSiS->CRT2YOffs) {
 	  xf86DisableRandR();
