@@ -6993,17 +6993,23 @@ static void
 SiSRestore_SiSFB_TVParms(ScrnInfoPtr pScrn)
 {
     SISPtr  pSiS = SISPTR(pScrn);
-    int     fd;
+    FILE *
+     fd;
     CARD32  parm;
 
     if(!pSiS->sisfbfound) return;
     if(!pSiS->sisfb_tvposvalid) return;
     if(!(pSiS->sisfbdevname[0])) return;
 
-    if((fd = open(pSiS->sisfbdevname, 'r')) != -1) {
+    if((fd = fopen
+(pSiS->sisfbdevname, "r"
+))
+) {
        parm = (CARD32)((pSiS->sisfb_tvxpos << 16) | (pSiS->sisfb_tvypos & 0xffff));
-       ioctl(fd, SISFB_SET_TVPOSOFFSET, &parm);
-       close(fd);
+       ioctl(fileno (
+fd)
+, SISFB_SET_TVPOSOFFSET, &parm);
+       fclose(fd);
     }
 }
 
