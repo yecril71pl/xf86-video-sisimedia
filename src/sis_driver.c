@@ -2838,17 +2838,15 @@ SiSDuplicateMode(DisplayModePtr source)
 
     if(source) {
        if((dest = malloc(sizeof(DisplayModeRec)))) {
+ char *const name = strdup
+(source->name);
 	  memcpy(dest, source, sizeof(DisplayModeRec));
 	  dest->name = NULL;
 	  dest->next = dest->prev = NULL;
-	  if(!(dest->name = name =
-malloc(strlen(source->name) + 1))) {
+	  if(!(dest->name = name )) {
 	     free(dest);
 	     dest = NULL;
-	  } else {
-	     strcpy(
-name, source->name);
-	  }
+	  } 
        }
     }
 
