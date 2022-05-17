@@ -80,8 +80,13 @@
 #endif
 
 /* legacy code shims */
-static int pciReadLong (int const a [02])
- { return pci_device_cfg_read_u32 (* a, a [01]); } 
+static int pciReadLong (void
+ const *const p,
+int const x
+)
+ { return pci_device_cfg_read_u32 (p
+, x
+); } 
 
 #include "sis.h"
 
