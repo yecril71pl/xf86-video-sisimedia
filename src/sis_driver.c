@@ -1018,7 +1018,8 @@ SiS_CheckKernelFB(ScrnInfoPtr pScrn)
 	     sprintf(name, "/dev/fb/%1d", (i - 8));
 	  }
 
-          if((fd = fopen(name, "r"))
+          if((F
+ = fopen(name, "r"))
 ) { int const fd = fileno
  (
 F
