@@ -72,6 +72,7 @@
  *
  */
 
+#include "StdAfx.h"
 #include <unistd.h>
 
 #ifdef HAVE_CONFIG_H
