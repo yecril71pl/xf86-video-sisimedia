@@ -80,13 +80,23 @@
 #endif
 
 /* legacy code shims */
-static int pciReadLong (void
- *const p [02]
+int
+ pci_device_cfg_read_u32
+  ( struct pci_device * dev, unsigned offset, uint32_t * val );
+
+static int pciReadLong (struct pci_device * dev, unsigned offset
 )
- { return pci_device_cfg_read_u32 (*
-p
-, p [01]
-); } 
+ { uint32_t
+ val = 0; /* TODO: check result */
+pci_device_cfg_read_u32
+  (
+ dev,
+ offset, &
+ val )
+; return
+ val
+;
+ } 
 
 #include "sis.h"
 
