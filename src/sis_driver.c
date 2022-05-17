@@ -739,7 +739,8 @@ SISFreeRec(ScrnInfoPtr pScrn)
 	        if(pScrn->currentMode->Private)
 	 	   free(pScrn->currentMode->Private);
 	 	if(pScrn->currentMode->name)
-	 	   free(pScrn->currentMode->name);
+	 	   free(NULL
+);
 	        free(pScrn->currentMode);
 	        pScrn->currentMode = p;
 	     } while(pScrn->currentMode != pScrn->modes);
