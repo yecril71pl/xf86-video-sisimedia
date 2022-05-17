@@ -105,7 +105,7 @@
 #include "sis_driver.h"
 
 #define _XF86DGA_SERVER_
-#include <X11/extensions/xf86dgastr.h>
+#
 
 #include "globals.h"
 
