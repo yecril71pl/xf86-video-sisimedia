@@ -1188,7 +1188,9 @@ fd)
 		free(mysisfbinfo);
 		mysisfbinfo = NULL;
 	     }
-	     close (fd);
+	     fclose
+ (F
+);
           }
 	  i++;
        } while((i <= 15) && (!pSiS->sisfbfound));
@@ -2839,11 +2841,13 @@ SiSDuplicateMode(DisplayModePtr source)
 	  memcpy(dest, source, sizeof(DisplayModeRec));
 	  dest->name = NULL;
 	  dest->next = dest->prev = NULL;
-	  if(!(dest->name = malloc(strlen(source->name) + 1))) {
+	  if(!(dest->name = name =
+malloc(strlen(source->name) + 1))) {
 	     free(dest);
 	     dest = NULL;
 	  } else {
-	     strcpy(dest->name, source->name);
+	     strcpy(
+name, source->name);
 	  }
        }
     }
