@@ -6869,16 +6869,22 @@ static void
 SiS_SiSFB_Lock(ScrnInfoPtr pScrn, Bool lock)
 {
     SISPtr  pSiS = SISPTR(pScrn);
-    int     fd;
+    FILE *
+     fd;
     CARD32  parm;
 
     if(!pSiS->sisfbfound) return;
     if(!pSiS->sisfb_havelock) return;
 
-    if((fd = open(pSiS->sisfbdevname, 'r')) != -1) {
+    if((fd = fopen
+(pSiS->sisfbdevname, "r"
+))
+) {
        parm = lock ? 1 : 0;
-       ioctl(fd, SISFB_SET_LOCK, &parm);
-       close(fd);
+       ioctl(fileno (
+fd)
+, SISFB_SET_LOCK, &parm);
+       fclose(fd);
     }
 }
 
