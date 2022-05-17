@@ -79,6 +79,10 @@
 #include "config.h"
 #endif
 
+/* legacy code shims */
+static int pciReadLong (int const a [02])
+ { return pci_device_cfg_read_u32 (* a, a [01]); } 
+
 #include "sis.h"
 
 #if GET_ABI_MAJOR(ABI_VIDEODRV_VERSION) < 6
