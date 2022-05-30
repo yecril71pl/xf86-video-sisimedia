@@ -33,4 +33,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: help
-      run: exec file /usr/share/doc/apt/copyright
+      run: exec cat /usr/share/doc/apt/copyright
