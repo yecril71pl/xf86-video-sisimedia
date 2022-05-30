@@ -33,4 +33,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: help
-      run: exec apt-cache
+      run: exec apt-cache show apt
