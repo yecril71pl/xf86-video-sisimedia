@@ -30,7 +30,7 @@ jobs:
       run: echo "Hello ${{ github.event.inputs.name }}"
       
   help:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
     - name: help
       run: exec ls /usr/share/doc/apt-get
