@@ -50,7 +50,7 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <X11/extensions/Xvlib.h>
 #include <X11/extensions/XvMC.h>
 #include <X11/extensions/XvMClib.h>
-#include <asm/io.h>
+#include <sys/io.h>
 #include "SiSXvMC.h"
 
 
