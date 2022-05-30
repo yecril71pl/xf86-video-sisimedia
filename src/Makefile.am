@@ -23,6 +23,7 @@
 # -avoid-version prevents gratuitous .0.0.0 version numbers on the end
 # _ladir passes a dummy rpath to libtool so the thing will actually link
 # TODO: -nostdlib/-Bstatic/-lgcc platform magic, not installing the .a, etc.
+SUBDIRS = xvmc
 AM_CFLAGS = @XORG_CFLAGS@ @DRI_CFLAGS@ -DSIS_USE_EXA
 sisimedia_drv_la_LTLIBRARIES = sisimedia_drv.la
 sisimedia_drv_la_LDFLAGS = -module -avoid-version
