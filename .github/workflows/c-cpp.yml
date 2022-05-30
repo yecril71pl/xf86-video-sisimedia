@@ -16,7 +16,7 @@ jobs:
     - name: update
       run: sudo apt-get update && exec apt search X.org
     - name: fulfil
-      run: exec sudo apt-get install automake xutils-dev xserver-xorg-dev
+      run: exec sudo apt-get install automake xutils-dev xserver-xorg-dev libxv-dev
     - name: reconfigure
       run: autoreconf -fi && exec ls -l install-sh
     - name: configure
