@@ -74,7 +74,7 @@ sisimedia_drv_la_SOURCES = \
 	sis_vga.c \
 	sis_video.c \
 	sis_video.h \
-	sis_videostr.h \
+	sis_videostr.h sispcirename.h 	\
 	vgatypes.h \
 	vstruct.h 
 
