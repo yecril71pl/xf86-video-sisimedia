@@ -786,7 +786,7 @@ Status XvMCCreateSurface( Display *display, XvMCContext *context,
    */
    if(priv_count != sizeof(SiSXvMCCreateSurfaceRec)) {
       printf("[XvMC] _xvmc_create_surface() return incorrect data size.\n");
-      printf("Expected %d, got %d\n",sizeof(SiSXvMCCreateSurfaceRec), priv_count);
+      printf("Expected %zd, got %d\n",sizeof(SiSXvMCCreateSurfaceRec), priv_count);
       free(priv_data);
       free(pSiSSurface);
       return BadAlloc;
