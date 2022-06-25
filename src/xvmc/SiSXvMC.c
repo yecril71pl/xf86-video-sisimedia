@@ -597,7 +597,7 @@ pSiSXvMC->fb_map.offset, pSiSXvMC->fb_map.size);
   /* Map MMIO registers */
   if(drmMap(pSiSXvMC->fd, pSiSXvMC->mmio_map.offset,
 	    pSiSXvMC->mmio_map.size, &(pSiSXvMC->mmio_map.address))<0){
-		printf("[XvMC] Unable to map MMIO at offset 0x%x and size 0x%x\n",
+		printf("[XvMC] Unable to map MMIO at offset 0x%x and size 0x%zx\n",
 		   (unsigned int)pSiSXvMC->mmio_map.offset,pSiSXvMC->mmio_map.size);
 		_xvmc_destroy_context(display, context);
 		/*free(pSiSXvMC->dmabufs->list);*/
