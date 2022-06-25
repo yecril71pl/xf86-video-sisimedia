@@ -610,8 +610,9 @@ pSiSXvMC->fb_map.offset, pSiSXvMC->fb_map.size);
   /* Map Frame Buffer */
   if(drmMap(pSiSXvMC->fd, pSiSXvMC->fb_map.offset,
 	    pSiSXvMC->fb_map.size, &(pSiSXvMC->fb_map.address))<0){
-		printf("[XvMC] Unable to map frame buffer at offset 0x%x and size 0x%x\n",
-		   (unsigned int)pSiSXvMC->fb_map.offset,pSiSXvMC->fb_map.size);
+		printf("[XvMC] Unable to map frame buffer at offset 0x%x and size 0x%zx\n",
+		   pSiSXvMC->fb_map.offset,
+pSiSXvMC->fb_map.size);
 		_xvmc_destroy_context(display, context);
 		/*free(pSiSXvMC->dmabufs->list);*/
 		free(pSiSXvMC);
