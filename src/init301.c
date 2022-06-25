@@ -91,6 +91,10 @@ static unsigned short	SiS_GetBIOSLCDResInfo(struct SiS_Private *SiS_Pr);
 static void		SiS_SetCH70xx(struct SiS_Private *SiS_Pr, unsigned short reg, unsigned char val);
 #endif
 
+static
+int pciReadLong	() { return
+pci_device_cfg_read_u32 (); }
+
 /*********************************************/
 /*         HELPER: Lock/Unlock CRT2          */
 /*********************************************/
