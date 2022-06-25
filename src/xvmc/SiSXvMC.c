@@ -541,7 +541,7 @@ Status XvMCCreateContext(Display *display, XvPortID port,
   */
   if(priv_count != sizeof(SiSXvMCCreateContextRec)) {
     printf("[XvMC] _xvmc_create_context() returned incorrect data size!\n");
-    printf("\tExpected %d, got %d\n", sizeof(SiSXvMCCreateContextRec), priv_count);
+    printf("\tExpected %zd, got %d\n", sizeof(SiSXvMCCreateContextRec), priv_count);
     _xvmc_destroy_context(display, context);
     free(pSiSXvMC);
     return BadAlloc;
