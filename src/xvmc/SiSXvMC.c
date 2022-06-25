@@ -568,7 +568,8 @@ Status XvMCCreateContext(Display *display, XvPortID port,
 ,pSiSXvMC->agp_map.offset, pSiSXvMC->agp_map.size);
   printf("mmio offset = 0x%x, mmio size = 0x%zx,\n",
 pSiSXvMC->mmio_map.offset, pSiSXvMC->mmio_map.size);
-  printf("fb offset = 0x%x, fb size = 0x%x,\n",pSiSXvMC->fb_map.offset, pSiSXvMC->fb_map.size);
+  printf("fb offset = 0x%x, fb size = 0x%zx,\n",
+pSiSXvMC->fb_map.offset, pSiSXvMC->fb_map.size);
 #endif
 
   
