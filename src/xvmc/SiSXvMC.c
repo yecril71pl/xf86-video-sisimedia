@@ -580,7 +580,7 @@ Status XvMCCreateContext(Display *display, XvPortID port,
   /* Map AGP memory */
   if(drmMap(pSiSXvMC->fd, pSiSXvMC->agp_map.offset,
 	    pSiSXvMC->agp_map.size, &(pSiSXvMC->agp_map.address)) < 0) {
-		printf("[XvMC] Unable to map AGP at offset 0x%x and size 0x%x\n",
+		printf("[XvMC] Unable to map AGP at offset 0x%x and size 0x%zx\n",
 		   (unsigned int)pSiSXvMC->agp_map.offset,pSiSXvMC->agp_map.size);
 		_xvmc_destroy_context(display, context);
 		/*free(pSiSXvMC->dmabufs->list);*/
