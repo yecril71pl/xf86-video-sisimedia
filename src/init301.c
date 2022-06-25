@@ -92,8 +92,10 @@ static void		SiS_SetCH70xx(struct SiS_Private *SiS_Pr, unsigned short reg, unsig
 #endif
 
 static
-int pciReadLong	() { return
-pci_device_cfg_read_u32 (); }
+int pciReadLong	(struct pci_device *dev, uint32_t *data
+) { return
+pci_device_cfg_read_u32 (dev, data
+); }
 
 /*********************************************/
 /*         HELPER: Lock/Unlock CRT2          */
